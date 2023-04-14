@@ -21,7 +21,7 @@ all_matches_button.click()
 #here we are using id = country to get the particular data of the country in the drop down
 #we are using text as the id sepecific or we can use the that will be start from 1.....on ward
 dropdown = Select(driver.find_element_by_id('country'))
-dropdown.select_by_visible_text("USA")
+dropdown.select_by_index(2)
 
 #here we are using the time cause the wesite is using few second to render the data
 
@@ -55,4 +55,4 @@ df = pd.DataFrame({'date':date,
               "away_team":away_team})
 
 #now sending the file in csv form
-df.to_csv('USA_football_data.csv', index= False)
+df.to_csv('Germany_football_data.csv', index= False)
